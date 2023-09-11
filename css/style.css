@@ -1,0 +1,65 @@
+.navbar{
+    margin-top: 10px;
+}
+.vxod{
+    margin-top: 30px;
+}
+.nav img{
+    margin-top: 10px;
+}
+.nav h2 {
+    margin-left: 100px;
+margin-top: -80px;
+}
+.nav p {
+    margin-left: 100px;
+    margin-top: -10px;
+}
+.nav button{
+    width: 150px;
+    margin-top: 5px;
+}
+.nav{
+    background-color: #f8f9fa;
+}
+.slader button{
+    width: 250px;
+    font-size: 24px;
+}
+.authorization h2{
+    text-align: center;
+    padding-top: 70px;
+}
+.bat button{
+    width: 180px;
+    margin-top: -80px;
+    margin-left: 10px;
+}
+.authorization{
+    padding-top: 70px;
+}
+.footer p{
+    margin-left: 60px;
+    margin-top: -48px;
+}
+.footer{
+    background-color: rgb(219, 219, 219);
+}
+h1{
+    text-align: center;
+}
+.bat2 h1{
+    text-align:left;
+   padding-top: 100px;
+   color: #f8f9fa;
+   margin-left:50px ;
+}
+.bat2 h3{
+   color: #b7b7b7;
+   width: 300px;
+   margin-left: 50px;
+}
+.forma{
+    background-image: url(..//img/fon1.png);
+    height: 500px;
+}

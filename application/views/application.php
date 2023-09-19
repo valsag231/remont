@@ -22,7 +22,9 @@
                         <div class="mb-3">
                             <label for="disabledSelect" class="form-label">Выбрать категорию</label>
                             <select id="disabledSelect" class="form-select">
-                                <option>Отключен элемент выбора</option>
+                            <?php foreach ($cotegor as $row) {
+        echo '<option>'.$row['name'].'</option>';
+        } ?>
                             </select>
                         </div>
                         <div class="mb-3">

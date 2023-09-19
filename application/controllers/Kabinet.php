@@ -17,7 +17,9 @@ class Kabinet extends CI_Controller{
         $this->load->view('temp/head.php');
         $id_user = $this->session->userdata('id_user');  
         $this->load->view('temp/nav_pol.php');
-        $this->load->view('application.php');  
+        $this->load->model('Coteg_m');
+        $data['cotegor']= $this->Coteg_m->select_coteg();
+        $this->load->view('application.php',$data);  
     }
 }
 ?>

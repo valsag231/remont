@@ -5,9 +5,9 @@ class User_m extends CI_Model{
         $result = $this->db->query($sql,array($id_user));
         return $result->result_array($id_user);
     }
-    public function update_user($id_user) {
-        $sql = "UPDATE user SET fio='$fio',email='$email',loginu='$login',passwordu='$password' WHERE id=$id_user";
-        $result = $this->db->query($sql,array($id_user));
+    public function update_user($id_user,$fio,$email,$login,$password) {
+        $sql = "UPDATE user SET fio='?',email='?',loginu='?',passwordu='?' WHERE id=$id_user";
+        $result = $this->db->query($sql,array($id_user,$fio,$email,$login,$password));
         return $result->result_array($id_user);
     }
 }

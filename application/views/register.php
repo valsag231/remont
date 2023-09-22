@@ -33,7 +33,7 @@
                           Согласие на обработку персональных данных
                          </label>
                      </div>
-                     <button type="button" id="reg" class="btn btn-primary">Зарагистрироваться</button>
+                     <button type="submit" id="reg" class="btn btn-primary">Зарагистрироваться</button>
                      
                  </form>
              </div>

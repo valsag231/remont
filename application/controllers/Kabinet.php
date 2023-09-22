@@ -37,5 +37,23 @@ class Kabinet extends CI_Controller{
         $this->load->view('application.php',$data);  
     }
 
+    public function zaivki(){
+        $this->load->view('temp/head.php');
+        $this->load->view('temp/nav_pol.php');
+        $id_user = $this->session->userdata('id_user');  
+        $this->load->model('zaivki_m');
+        $data['zaivki']= $this->zaivki_m->select_zaivki($id_user);
+        $this->load->view('zaivki.php',$data);
+    }
+
+
+    public function delete_applications(){
+        if (!empty($_GET)){
+            $id_application = $_GET['id_application'];
+            $this->load->model('application_model');
+            $this->application_model->delete_applications($id_application);  
+            redirect('Kabinet/zaivki');  
+        }
+    }
     }
 ?>

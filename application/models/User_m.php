@@ -1,5 +1,5 @@
 <?php
-class User_m extends CI_Model{
+class User_m extends CI_Model{ 
     public function select_personal($id_user){
         $sql = 'SELECT * FROM user WHERE id_user=?';
         $result = $this->db->query($sql,array($id_user));

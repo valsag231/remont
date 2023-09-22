@@ -17,7 +17,7 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="Kabinet/application">ЗАЯВКИ</a>
                   </li>
-                    <a class="nav-link active" aria-current="page" href="#">О НАС</a>
+                    <a class="nav-link active" aria-current="page" href="Kabinet/zaivki">МОИ ЗАЯВКИ</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">КОНТАКТЫ</a>

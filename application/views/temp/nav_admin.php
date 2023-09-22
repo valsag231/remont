@@ -15,7 +15,7 @@
                     <a class="nav-link active" aria-current="page" href="#">ГЛАВНАЯ</a>
                   <li class="nav-item">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="admin/">ПРОСМОТР ЗАЯВОК</a>
+                    <a class="nav-link active" aria-current="page" href="admin/admin">ПРОСМОТР ЗАЯВОК</a>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="admin/add_categor">КАТЕГГОРИИ</a>
                   </li>

@@ -12,7 +12,7 @@ class Admin extends CI_Controller{
         if (!empty($_POST)){
             $this->load->model('add_category_m');
             $this->add_category_m->insert_add_category($_POST['name_category']);
-            redirect('add_category.php');
+            redirect('admin/add_categor');
        }
     }
 
@@ -24,5 +24,18 @@ class Admin extends CI_Controller{
             redirect('Admin/add_categor');  
         }
     }
+    public function admin(){
+        $this->load->view('temp/head.php');
+        $this->load->view('temp/nav_admin.php');
+        $id_user = $this->session->userdata('id_user'); 
+        $this->load->model('Zaivki_m');
+        $data['applic'] = $this->Zaivki_m->select_applic(); 
+        $this->load->view('admin.php',$data);
+    }
+
+    public function status(){
+      
+    }
+
 }
 ?>

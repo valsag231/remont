@@ -41,5 +41,15 @@ class Admin extends CI_Controller{
       redirect('admin/admin');
     }
 
+    public function add_img(){
+        $this->load->view('temp/head.php');
+        $this->load->view('temp/nav_admin.php');
+        $id_user = $this->session->userdata('id_user'); 
+        $this->load->model('Add_img_m');
+        $this->Add_img_m->update_applic($_POST['data_k'],$_POST['img_pocle'],$_POST['date_k']);
+        $this->load->view('add_img.php');
+    }
+  
+
 }
 ?>

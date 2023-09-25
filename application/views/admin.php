@@ -17,15 +17,23 @@
   <tbody>
     <?php
     foreach ($applic as $row){
-        echo ' <tr><td>'.$row['data_n'].'</td>
+        echo '<tr><td>'.$row['data_n'].'</td>
         <td>'.$row['fio'].'</td>
         <td>'.$row['name'].'</td>
         <td>'.$row['description'].'</td>
         <td>'.$row['data_k'].'</td>
         <td>'.$row['name_category'].'</td>
-        <td>'.$row['statys'].'</td>
-        <td><button type="button" class="btn btn-danger"><a href="admin/status/'.$row['id_application'].'">Принять</button></td></tr>';
-    }
+        <td>'.$row['statys'].'</td>';
+        if($row['statys'] == "Новый"){
+          echo '<<td> <button type="button" class="btn btn-dark"><a href="admin/status/'.$row['id_application'].'/1">Принять</button>';
+          echo '<button type="button" class="btn btn-dark"><a href="admin/status/'.$row['id_application'].'/2">Отклонить</button>';
+        }
+          if($row['statys'] == "Принято"){
+            echo'<<td> <button type="button" class="btn btn-dark"><a href="admin/add_img/'.$row['id_application'].'/3">Решено</button>';
+            }
+            echo '</td></tr>';
+        }
+      
     ?>
    
   </tbody>

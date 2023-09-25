@@ -6,7 +6,7 @@ class Zaivki_m extends CI_Model{
        return $result->result_array($id_user);
     }
     public function select_applic(){
-        $sql = 'SELECT data_n,fio,name,description,data_k,name_category,statys from user,application,category WHERE user.id_user=application.id_user and application.id_category=category.id_category';
+        $sql = 'SELECT application.id_application,data_n,fio,name,description,data_k,name_category,statys from user,application,category WHERE user.id_user=application.id_user and application.id_category=category.id_category';
         $result = $this->db->query($sql);
         return $result->result_array(); 
     }

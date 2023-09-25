@@ -34,7 +34,11 @@ class Admin extends CI_Controller{
     }
 
     public function status(){
-      
+      $id_application = $this->uri->segment(3);
+      $statys = $this->uri->segment(4);
+      $this->load->model('statys_m');
+      $this->statys_m->update_status($id_application,$statys);
+      redirect('admin/admin');
     }
 
 }

@@ -24,7 +24,7 @@
         <td>'.$row['data_k'].'</td>
         <td>'.$row['name_category'].'</td>
         <td>'.$row['statys'].'</td>
-        <td></td></tr>';
+        <td><button type="button" class="btn btn-danger"><a href="admin/status/'.$row['id_application'].'">Принять</button></td></tr>';
     }
     ?>
    

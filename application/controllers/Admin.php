@@ -42,13 +42,26 @@ class Admin extends CI_Controller{
     }
 
     public function add_img(){
-        $this->load->view('temp/head.php');
-        $this->load->view('temp/nav_admin.php');
-        $id_user = $this->session->userdata('id_user'); 
-        $this->load->model('Add_img_m');
-        $this->Add_img_m->update_applic($_POST['data_k'],$_POST['img_pocle'],$_POST['date_k']);
-        $this->load->view('add_img.php');
+            $data['id_application'] = $this->uri->segment(3);
+            $this->load->view('temp/head.php');
+            $this->load->view('temp/nav_admin.php');
+            $this->load->view('add_img.php',$data);
+        }
+        public function ins_conf(){
+            if (!empty($_POST)){
+                if(isset($_FILES['img_posle']) && $_FILES['img_posle']['error'] === UPLOAD_ERR_OK){       
+            $id_application = $_POST['id_application'];
+            $data_k = $_POST['data_k'];
+            $img_posle = $_FILES['img_posle']['name'];
+            $this->load->model('add_img_m');
+            $this->add_img_m->update_applic($id_application, $img_posle, $data_k);  
+             $photopath = "img/".$img_posle;
+                move_uploaded_file($_FILES['img_posle']['tmp_name'], $photopath);
+            redirect('admin/admin');
+        }
     }
+}
+
   
 
 }
